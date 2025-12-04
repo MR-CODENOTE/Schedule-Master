@@ -6,7 +6,7 @@ const logAction = require('../utils/logger');
 const router = express.Router();
 
 // Get all employees (accessible to authenticated users)
-router.get('/', verifyToken, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { data: employees, error } = await supabase
       .from('employees')

@@ -6,7 +6,7 @@ const logAction = require('../utils/logger');
 const router = express.Router();
 
 // Get all assignments for a given period (e.g., a week/month)
-router.get('/', verifyToken, async (req, res) => {
+router.get('/', async (req, res) => {
   // Optional: Add query parameters for date range if needed for performance
   try {
     const { data: assignments, error } = await supabase

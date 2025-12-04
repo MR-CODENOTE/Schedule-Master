@@ -8,7 +8,7 @@ const router = express.Router();
 // --- Roles --- //
 
 // Get all roles
-router.get('/roles', verifyToken, async (req, res) => {
+router.get('/roles', async (req, res) => {
   try {
     const { data: roles, error } = await supabase
       .from('roles')
