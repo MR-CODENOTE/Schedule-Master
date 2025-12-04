@@ -92,7 +92,7 @@ router.delete('/roles/:id', verifyToken, async (req, res) => {
 // --- Time Slots --- //
 
 // Get all time slots
-router.get('/times', verifyToken, async (req, res) => {
+router.get('/times', async (req, res) => {
   try {
     const { data: timeSlots, error } = await supabase
       .from('time_slots')
