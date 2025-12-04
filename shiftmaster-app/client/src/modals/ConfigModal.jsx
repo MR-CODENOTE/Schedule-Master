@@ -45,7 +45,7 @@ function ConfigModal({
       setNewTimeEnd('');
     } else {
       alert('Time slot label cannot be empty.');
-    F}
+    }
   };
 
   if (!isOpen) return null;
