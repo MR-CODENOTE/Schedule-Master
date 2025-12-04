@@ -42,56 +42,41 @@ function App() {
   const [selectedAssignmentCell, setSelectedAssignmentCell] = useState(null); // { emp, date, assignKey }
 
   const fetchEmployees = useCallback(async () => {
-    if (currentUser) {
-      try {
-        const data = await api.getEmployees();
-        setEmployees(data);
-      } catch (error) {
-        console.error('Error fetching employees:', error.message);
-      }
-    } else {
-      setEmployees([]);
+    // No "if (currentUser)" check here!
+    try {
+      const data = await api.getEmployees();
+      setEmployees(data);
+    } catch (error) {
+      console.error('Error fetching employees:', error.message);
     }
-  }, [currentUser]);
+  }, []); // Dependency is now empty
 
   const fetchRoles = useCallback(async () => {
-    if (currentUser) {
-      try {
-        const data = await api.getRoles();
-        setRoles(data);
-      } catch (error) {
-        console.error('Error fetching roles:', error.message);
-      }
-    } else {
-      setRoles([]);
+    try {
+      const data = await api.getRoles();
+      setRoles(data);
+    } catch (error) {
+      console.error('Error fetching roles:', error.message);
     }
-  }, [currentUser]);
+  }, []);
 
   const fetchTimeSlots = useCallback(async () => {
-    if (currentUser) {
-      try {
-        const data = await api.getTimeSlots();
-        setTimeSlots(data);
-      } catch (error) {
-        console.error('Error fetching time slots:', error.message);
-      }
-    } else {
-      setTimeSlots([]);
+    try {
+      const data = await api.getTimeSlots();
+      setTimeSlots(data);
+    } catch (error) {
+      console.error('Error fetching time slots:', error.message);
     }
-  }, [currentUser]);
+  }, []);
 
   const fetchAssignments = useCallback(async () => {
-    if (currentUser) {
-      try {
-        const data = await api.getAssignments();
-        setAssignments(data);
-      } catch (error) {
-        console.error('Error fetching assignments:', error.message);
-      }
-    } else {
-      setAssignments([]);
+    try {
+      const data = await api.getAssignments();
+      setAssignments(data);
+    } catch (error) {
+      console.error('Error fetching assignments:', error.message);
     }
-  }, [currentUser]);
+  }, []);
 
   const fetchAuditLogs = useCallback(async () => {
     if (currentUser?.role === 'admin') {
