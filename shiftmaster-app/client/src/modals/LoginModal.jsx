@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 function LoginModal({ isOpen, onClose, onLogin }) {
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('superadmin0790'); // Pre-fill for convenience
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState(''); // Pre-fill for convenience
 
   const handleSubmit = (e) => {
     e.preventDefault();
