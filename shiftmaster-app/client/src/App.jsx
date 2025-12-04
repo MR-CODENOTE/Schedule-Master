@@ -186,12 +186,11 @@ function App() {
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to log out?")) {
       logout();
-      setEmployees([]);
-      setAssignments([]);
-      setRoles([]);
-      setTimeSlots([]);
-      setAuditLogs([]);
-      setUsers([]);
+      // We removed the lines that clear the schedule!
+    
+    // Only clear sensitive admin data:
+    setAuditLogs([]);
+    setUsers([]);
     }
   };
 
