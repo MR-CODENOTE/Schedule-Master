@@ -22,7 +22,7 @@ function LoginModal({ isOpen, onClose, onLogin }) {
               type="text"
               id="loginUsername"
               className="w-full border dark:border-slate-600 rounded px-3 py-3 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="admin"
+              placeholder=""
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -33,7 +33,7 @@ function LoginModal({ isOpen, onClose, onLogin }) {
               type="password"
               id="loginPassword"
               className="w-full border dark:border-slate-600 rounded px-3 py-3 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="superadmin0790"
+              placeholder=""
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
