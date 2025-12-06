@@ -124,6 +124,17 @@ function Navbar({
             )}
           </div>
 
+          {/* ✅ NEW: Public Refresh Button (Visible to Everyone) */}
+          <button
+            onClick={onLoadSchedule}
+            className="group bg-slate-700 hover:bg-slate-600 w-9 h-9 flex items-center justify-center rounded-full transition text-white ml-auto lg:ml-0 active:scale-95"
+            title="Refresh Schedule"
+          >
+            <i className="fa-solid fa-rotate transition-transform duration-500 group-hover:rotate-180"></i>
+          </button>
+
+
+
           <button
             onClick={toggleTheme}
             className="bg-slate-700 hover:bg-slate-600 w-9 h-9 flex items-center justify-center rounded-full transition text-yellow-400 dark:text-blue-300 ml-auto lg:ml-0"
